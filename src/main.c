@@ -2,6 +2,7 @@
 #include <stdlib.h>
 #include "fileHandler.h"
 #include "graph.h"
+#include "guloso.h"
 
 int main(int argc, char *argv[]){
     FILE *inputFile;
@@ -39,6 +40,7 @@ int main(int argc, char *argv[]){
 
         if(strategy == 1){
             // Algoritmo 1
+            guloso(&graph, nrows, ncols);
         }else if(strategy == 2){
             // Algoritmo 2
         }
