@@ -5,7 +5,7 @@
 #include <stdlib.h>
 #include "graph.h"
 
-int vida_harry (int* caminho, int indice_caminho);
+int energia_harry (int* caminho, int indice_caminho);
 int guloso (Graph *graph, int nrows, int ncols);
 
 #endif

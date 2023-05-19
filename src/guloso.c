@@ -1,25 +1,19 @@
 #include "guloso.h"
 
-int vida_harry (int* caminho, int indice_caminho) {
+int energia_harry (int* caminho, int indice_caminho) {
+
+    int energia_inicial = 1;
+    int energia = 1;
 
     for (int i = 0; i < indice_caminho; i++) {
-        printf("[%d]", caminho[i]);
-    }
-
-    int vida_inicial = 1;
-    int vida = 1;
-
-    for (int i = 0; i < indice_caminho; i++) {
-        vida = vida + caminho[i];
-        if (vida < 1) {
-            while(vida < 1) {
-                vida++;
-                vida_inicial++;
-            }
+        energia = energia + caminho[i];
+        while(energia < 1) {
+            energia++;
+            energia_inicial++;
         }
     }
 
-    return vida_inicial;
+    return energia_inicial;
 }
 
 
@@ -46,7 +40,7 @@ int guloso (Graph *graph, int nrows, int ncols) {
         indice_caminho++;
         indice_vertices = melhor_vertice;
     }
-    int vida = vida_harry(caminho, indice_caminho);
+    int energia = energia_harry(caminho, indice_caminho);
     free(caminho);
-    return vida;
+    return energia;
 }

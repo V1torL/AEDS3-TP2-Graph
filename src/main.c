@@ -42,7 +42,7 @@ int main(int argc, char *argv[]){
             // Algoritmo 1
             int a;
             a = guloso(&graph, nrows, ncols);
-            printf("\n%d\n", a);
+            printf("%d\n", a);
         }else if(strategy == 2){
             // Algoritmo 2
         }
